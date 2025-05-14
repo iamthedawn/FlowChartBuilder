@@ -1,0 +1,98 @@
+.Node_container {
+  color: rgba(0, 0, 0, 0.65);
+  border: 1px solid rgba(0, 0, 0, 0.65);
+  width: 150px;
+  border-radius: 8px;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.headerFlex {
+  width: 88%;
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.subHeading {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.5%;
+  // color: #141414;
+
+  margin: 0 auto;
+  height: 100%;
+  padding: 0 5px;
+  width: 100%;
+  // border: 2px solid red;
+}
+.initialCustomNode1_bgColor {
+  background: linear-gradient(to bottom, #ff5f5f, #cc0000)
+    !important;
+  color:#ffff !important; 
+  border: 1px solid white !important;
+}
+
+.custom1_bgColor {
+  background: linear-gradient(to bottom, #ff5f5f, #cc0000) !important;
+  color:#ffff !important; 
+  border: 1px solid white !important;
+}
+
+.custom2_bgColor {
+  background: linear-gradient(to bottom, #6fb8ff, #0047ab) !important;
+  color:#ffff !important; 
+  border: 1px solid white !important;
+}
+.custom3_bgColor {
+  background: linear-gradient(to bottom, #7efc7e, #007f00) !important;
+  color:#ffff !important; 
+  border: 1px solid white !important;
+}
+.custom4_bgColor {
+  background: linear-gradient(to bottom, #d5a6ff, #800080) !important;
+  color:#ffff !important; 
+  border: 1px solid white !important;
+}
+.actionSrc1{
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  border-color: rgba(0, 0, 0, 0.65);
+}
+.Duo_Target1 {
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  border-color: rgba(0, 0, 0, 0.65);
+}
+.bottom_source{
+  bottom: 0%;
+  width: 10px;
+  height: 10px;
+  border-color: rgba(0, 0, 0, 0.65);
+}
+.bottom_target{
+  top: 0%;
+  width: 10px;
+  height: 10px;
+  border-color: rgba(0, 0, 0, 0.65);
+}
+.deleteBtn {
+  position: absolute;
+  top: -20px;
+  right: 5px;
+  background-color: grey;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: -0.5%;
+  padding: 0 5%;
+  border-radius: 16px;
+}
