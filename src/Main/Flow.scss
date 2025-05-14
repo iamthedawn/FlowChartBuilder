@@ -11,6 +11,12 @@
   box-shadow: black !important;
   align-items: center;
 }
+.react-flow__renderer {
+  touch-action: none;
+}
+.react-flow__viewport {
+  -webkit-overflow-scrolling: auto;
+}
 .customTooltip {
   font-size: 5.2rem !important; /* Adjust font size */
 }
