@@ -34,7 +34,7 @@ npm install
 ```bash
 npm run dev
 ```
-# Visit http://localhost:5173 in your browser to view the app.
+## Visit http://localhost:5173 in your browser to view the app.
 ### 4. Build for Production
 ```bash
 npm run build
@@ -46,7 +46,7 @@ npm run build
 - dom-to-image
 - Vite
 
- # ❤️ Made with love by Nishant Mourya
+ ## ❤️ Made with love by Nishant Mourya
 
 ---
 ### ✅ Notes:
