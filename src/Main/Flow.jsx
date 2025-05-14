@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState, useMemo } from "react";
 import {
   ReactFlow,
   MiniMap,
@@ -948,43 +948,46 @@ const Flow = () => {
     // return () => clearTimeout(timeout);
   }, []);
 
-  const nodeTypes = {
-    initialCustomNode1: (props) => (
-      <CommonNode
-        {...props}
-        handleDeleteNode={(id) => handleDeleteNode(id, setNodes, setEdges)}
-        setShowEditBox={setShowEditBox}
-      />
-    ),
-    custom1: (props) => (
-      <CommonNode
-        {...props}
-        handleDeleteNode={(id) => handleDeleteNode(id, setNodes, setEdges)}
-        setShowEditBox={setShowEditBox}
-      />
-    ),
-    custom2: (props) => (
-      <CommonNode
-        {...props}
-        handleDeleteNode={(id) => handleDeleteNode(id, setNodes, setEdges)}
-        setShowEditBox={setShowEditBox}
-      />
-    ),
-    custom3: (props) => (
-      <CommonNode
-        {...props}
-        handleDeleteNode={(id) => handleDeleteNode(id, setNodes, setEdges)}
-        setShowEditBox={setShowEditBox}
-      />
-    ),
-    custom4: (props) => (
-      <CommonNode
-        {...props}
-        handleDeleteNode={(id) => handleDeleteNode(id, setNodes, setEdges)}
-        setShowEditBox={setShowEditBox}
-      />
-    ),
-  };
+   const nodeTypes = useMemo(
+    () => ({
+      initialCustomNode1: (props) => (
+        <CommonNode
+          {...props}
+          handleDeleteNode={(id) => handleDeleteNode(id, setNodes, setEdges)}
+          setShowEditBox={setShowEditBox}
+        />
+      ),
+      custom1: (props) => (
+        <CommonNode
+          {...props}
+          handleDeleteNode={(id) => handleDeleteNode(id, setNodes, setEdges)}
+          setShowEditBox={setShowEditBox}
+        />
+      ),
+      custom2: (props) => (
+        <CommonNode
+          {...props}
+          handleDeleteNode={(id) => handleDeleteNode(id, setNodes, setEdges)}
+          setShowEditBox={setShowEditBox}
+        />
+      ),
+      custom3: (props) => (
+        <CommonNode
+          {...props}
+          handleDeleteNode={(id) => handleDeleteNode(id, setNodes, setEdges)}
+          setShowEditBox={setShowEditBox}
+        />
+      ),
+      custom4: (props) => (
+        <CommonNode
+          {...props}
+          handleDeleteNode={(id) => handleDeleteNode(id, setNodes, setEdges)}
+          setShowEditBox={setShowEditBox}
+        />
+      ),
+    }),
+    [setNodes, setEdges, setShowEditBox]
+  );
 
   useEffect(() => {
     if (renderSaved) {
