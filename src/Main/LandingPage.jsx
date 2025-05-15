@@ -83,7 +83,7 @@ const LandingPage = () => {
             <h2>Multiple Usecase</h2>
           </div>
         </div>
-        <div className="credits"> Made with love by Nishant Mourya 🩶</div>
+        <div className="credits"> Made with 🩶 by Nishant Mourya</div>
       </div>
     </div>
   );
