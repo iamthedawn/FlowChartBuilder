@@ -43,19 +43,19 @@ const CustomControls = ({
     <Panel position="left" className="customControlPanel">
       <div className="panelBtn" onClick={() => setShowAddBox((prev) => !prev)}>
         <Tooltip title="Add New Nodes" arrow followCursor>
-          <AddBoxIcon style={{ fontSize: "xxx-large" }} />
+          <AddBoxIcon className="iconSize" />
         </Tooltip>
       </div>
       <hr className="panelBrk" />
       <div className="panelBtn" onClick={() => zoomIn()}>
         <Tooltip title="Zoom In" arrow followCursor>
-          <ZoomInIcon style={{ fontSize: "xxx-large" }} />
+          <ZoomInIcon className="iconSize" />
         </Tooltip>
       </div>
 
       <div className="panelBtn" onClick={() => zoomOut()}>
         <Tooltip title="Zoom Out" arrow followCursor>
-          <ZoomOutIcon style={{ fontSize: "xxx-large" }} />
+          <ZoomOutIcon className="iconSize" />
         </Tooltip>
       </div>
       <hr className="panelBrk" />
@@ -68,13 +68,13 @@ const CustomControls = ({
         }}
       >
         <Tooltip title="Clear Screen" arrow followCursor>
-          <DeleteIcon style={{ fontSize: "xxx-large" }} />
+          <DeleteIcon className="iconSize" />
         </Tooltip>
       </div>
       <hr className="panelBrk" />
       <div className="panelBtn" onClick={() => handleSaveFlow()}>
         <Tooltip title="Save" arrow followCursor>
-          <SaveIcon style={{ fontSize: "xxx-large" }} />
+          <SaveIcon className="iconSize" />
         </Tooltip>
       </div>
       <hr className="panelBrk" />
@@ -93,7 +93,7 @@ const CustomControls = ({
       <hr className="panelBrk" />
       <div className="panelBtn" onClick={() => setExportBox((prev) => !prev)}>
         <Tooltip title="Export" arrow followCursor>
-          <SaveAltIcon style={{ fontSize: "xxx-large" }} />
+          <SaveAltIcon className="iconSize" />
         </Tooltip>
       </div>
 
