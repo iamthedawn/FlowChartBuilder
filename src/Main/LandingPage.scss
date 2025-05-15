@@ -58,17 +58,6 @@
   // position: absolute;
   font-size: 1.5vw;
 }
-.btn {
-  font-size: 1rem;
-  border: none;
-  background: #5ca9fb;
-  background-image: linear-gradient(to right, #5ca9fb 0%, #6372ff 100%);
-  border-radius: 25px;
-}
-.btn > a {
-  color: white !important;
-  text-decoration: none;
-}
 .features {
   background: #ffffff;
   width: 100%;
@@ -121,38 +110,42 @@
   font-weight: 600;
 }
 .btn {
-  width: 10.5rem;
+  width: 11rem;
   height: 3.25vw;
   position: absolute;
   bottom: 0%;
   color: #ffffff !important;
-
+  font-size: 0.938rem;
   cursor: pointer;
   font-weight: 700;
   transition: all 0.2s;
   padding: 10px 20px;
   border-radius: 100px;
-    background: linear-gradient(
+  // background: linear-gradient(135deg, #d3d3d3, #808080, #d3d3d3);
+  background: linear-gradient(
     135deg,
     #4d4d4d,
     #1a1a1a,
     #4d4d4d
   ); // Dark grey gradient
-  // background: linear-gradient(135deg, #d3d3d3, #808080, #d3d3d3);
 
   // background: #cfef00;
   border: 1px solid transparent;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 15px;
   font-weight: 200;
 }
 
 .btn:hover {
-  // background: #c4e201;
   background: linear-gradient(135deg, #d3d3d3, #808080, #d3d3d3);
-
+  // background: #c4e201;
+  // background: linear-gradient(
+  //   135deg,
+  //   #4d4d4d,
+  //   #1a1a1a,
+  //   #4d4d4d
+  // ); // Dark grey gradient
 }
 
 .btn > svg {
@@ -175,7 +168,7 @@
   right: 0;
 }
 @media (max-width: 768px) {
-    .credits {
+  .credits {
     width: 100%;
     text-align: center;
   }
@@ -190,7 +183,7 @@
     font-size: 0.85rem;
   }
   .btn {
-    width: 7.5rem;
+    width: 30vw;
     height: 4vw;
     bottom: 0%;
     font-size: 2.5vw;
@@ -211,7 +204,10 @@
     font-size: 0.5rem;
     font-weight: 600;
   }
+  .bgImg {
+    height: 72vh;
+  }
   .img {
-    height: 78.7vh; /* fix: vh not h */
+    height: 78.7vh; 
   }
 }
