@@ -132,7 +132,13 @@
   transition: all 0.2s;
   padding: 10px 20px;
   border-radius: 100px;
-  background: linear-gradient(135deg, #d3d3d3, #808080, #d3d3d3);
+    background: linear-gradient(
+    135deg,
+    #4d4d4d,
+    #1a1a1a,
+    #4d4d4d
+  ); // Dark grey gradient
+  // background: linear-gradient(135deg, #d3d3d3, #808080, #d3d3d3);
 
   // background: #cfef00;
   border: 1px solid transparent;
@@ -145,12 +151,8 @@
 
 .btn:hover {
   // background: #c4e201;
-  background: linear-gradient(
-    135deg,
-    #4d4d4d,
-    #1a1a1a,
-    #4d4d4d
-  ); // Dark grey gradient
+  background: linear-gradient(135deg, #d3d3d3, #808080, #d3d3d3);
+
 }
 
 .btn > svg {
