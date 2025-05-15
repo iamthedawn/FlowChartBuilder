@@ -1012,7 +1012,7 @@ const Flow = () => {
   return showLoader ? (
     <div className="spinner"></div>
   ) : (
-    <div style={{ width: "100vw", height: "100vh", position: "relative" }}>
+    <div className="container">
       <ReactFlow
         style={{ backgroundColor: "#000000ad" }}
         nodes={nodes}
