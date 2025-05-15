@@ -144,6 +144,29 @@ const CustomControls = ({
             id="importTextArea"
             placeholder="Paste exported JSON here"
             style={{ width: "100%", height: "100px" }}
+                onKeyDown={(e) => {
+      if (e.key === "Enter" && !e.shiftKey) {
+        e.preventDefault(); // prevent newline
+        const input = e.target.value.trim();
+        try {
+          const nodesMatch = input.match(/nodes:\s*(\[[\s\S]*?\])/);
+          const edgesMatch = input.match(/edges:\s*(\[[\s\S]*?\])/);
+          if (nodesMatch && edgesMatch) {
+            const nodes = JSON.parse(nodesMatch[1]);
+            const edges = JSON.parse(edgesMatch[1]);
+            setNodes(nodes);
+            setEdges(edges);
+            alert("Nodes and edges have been successfully imported!");
+          } else {
+            alert(
+              "Invalid format. Please ensure the text contains 'nodes: [...]' and 'edges: [...]'."
+            );
+          }
+        } catch (error) {
+          alert("Error parsing nodes or edges. Please check your input.");
+        }
+      }
+    }}
           />
           <button
             className="optionBtn2"
@@ -190,6 +213,11 @@ const CustomControls = ({
                 label: e.target.value,
               }))
             }
+            onKeyDown={(e) => {
+              if (e.key === "Enter") {
+                handleEditSubmit();
+              }
+            }}
           />
           <button className="optionBtn2" onClick={() => handleEditSubmit()}>
             Submit
