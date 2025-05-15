@@ -1006,8 +1006,6 @@ const Flow = () => {
     },
     [nodes, setEdges, setNodes]
   );
-  console.log("nodes", nodes);
-  console.log("edges", edges);
 
   return showLoader ? (
     <div className="spinner"></div>
