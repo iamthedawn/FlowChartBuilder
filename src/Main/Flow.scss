@@ -166,7 +166,19 @@
   border-radius: 16px;
   transition: opacity 0.2s ease-in-out;
 }
+.iconSize{
+  font-size: xxx-large !important;
+}
 @media (max-width: 768px) {
+    .iconSize{
+    font-size: xx-large !important;
+  }
+  .panelBrk {
+    width: 1% !important;
+    height: 5vw !important;
+    margin:0 !important;
+    background-color:rgb(167, 160, 160) !important;
+  }
   .minimap{
     width: 100px;
   }
