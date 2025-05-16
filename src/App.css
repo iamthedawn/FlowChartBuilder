@@ -33,6 +33,7 @@ body {
   place-items: center;
   height: auto;
   width: 100%;
+  background-color: #ffffff;
 }
 html, body {
   margin: 0;
