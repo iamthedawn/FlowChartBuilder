@@ -137,7 +137,11 @@ const BeerGlass = ({ setBeerShow }) => {
             Quantity {beerAmount}ml : Price ₹{priceRef.current}
           </div>
 
-          <button onClick={() => setQrShow(true)} class="payBtn">
+          <button onClick={() => {
+  setQrLoader(true);
+  setQrShow(true);
+
+}} class="payBtn">
             Pay
           </button>
         </div>
