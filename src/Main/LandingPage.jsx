@@ -5,6 +5,9 @@ import DynamicFeedIcon from "@mui/icons-material/DynamicFeed";
 import IosShareIcon from "@mui/icons-material/IosShare";
 import TouchAppIcon from "@mui/icons-material/TouchApp";
 import { useNavigate } from "react-router-dom";
+import BeerGlass from "./BeerGlass";
+import beerIcon from "../assets/images/beerIcon.svg"
+
 const LandingPage = () => {
   const navigate = useNavigate();
   const [beerShow, setBeerShow] = useState(true);
