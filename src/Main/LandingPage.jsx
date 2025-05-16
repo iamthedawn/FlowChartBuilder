@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./LandingPage.scss";
 import AutoFixHighIcon from "@mui/icons-material/AutoFixHigh";
 import DynamicFeedIcon from "@mui/icons-material/DynamicFeed";
@@ -7,9 +7,21 @@ import TouchAppIcon from "@mui/icons-material/TouchApp";
 import { useNavigate } from "react-router-dom";
 const LandingPage = () => {
   const navigate = useNavigate();
+  const [beerShow, setBeerShow] = useState(true);
   return (
     <div className="container">
       <div className="bgImg">
+         <button class="beerBtn" onClick={() => setBeerShow(true)}>
+          <span class="icon">
+            <img src={beerIcon} style={{height:"30px",width:"40px"}}/>
+  
+          </span>
+          <span class="beerTxt">
+            Liked it?
+            <br/>
+            Buy Me A Beer
+            </span>
+        </button>
         <div className="img"></div>
 
         {/* Text Content */}
@@ -85,6 +97,7 @@ const LandingPage = () => {
         </div>
         <div className="credits"> Made with 🩶 by Nishant Mourya</div>
       </div>
+      {beerShow && <BeerGlass setBeerShow={setBeerShow} />}
     </div>
   );
 };
