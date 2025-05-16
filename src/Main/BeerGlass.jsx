@@ -38,16 +38,13 @@ const BeerGlass = ({ setBeerShow }) => {
     };
 
     document.addEventListener("mousedown", handleClickOutside);
-    return () => (
-      document.removeEventListener("mousedown", handleClickOutside),
-      clearTimeout(timeOut)
-    );
+   return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
   useEffect(() => {
     const timeOut = setTimeout(() => {
       setQrLoader(false);
-    }, 4000);
+    }, 2500);
     return () => clearTimeout(timeOut);
   }, [qrShow]);
 
