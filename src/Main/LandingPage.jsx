@@ -15,9 +15,8 @@ const LandingPage = () => {
     <div className="container">
       <div className="bgImg">
          <button class="beerBtn" onClick={() => setBeerShow(true)}>
-          <span class="icon">
-            <img src={beerIcon} style={{height:"30px",width:"40px"}}/>
-  
+           <span class="beerIcon">
+            <img src={beerIcon} className="beerIconImg" />
           </span>
           <span class="beerTxt">
             Liked it?
