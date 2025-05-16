@@ -28,10 +28,6 @@ const BeerGlass = ({ setBeerShow }) => {
   };
 
   useEffect(() => {
-    const timeOut = setTimeout(() => {
-      setQrLoader(false);
-    }, 4000);
-
     const handleClickOutside = (event) => {
       if (
         containerRef.current &&
@@ -47,6 +43,13 @@ const BeerGlass = ({ setBeerShow }) => {
       clearTimeout(timeOut)
     );
   }, []);
+
+  useEffect(() => {
+    const timeOut = setTimeout(() => {
+      setQrLoader(false);
+    }, 4000);
+    return () => clearTimeout(timeOut);
+  }, [qrShow]);
 
   const fillPercentage = (beerAmount / MAX_ML) * 35;
 
