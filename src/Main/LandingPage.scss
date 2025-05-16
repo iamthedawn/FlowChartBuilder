@@ -168,7 +168,6 @@
   right: 0;
 }
 
-/// ------from here
 .beerBtn {
   right:1%;
   position: absolute;
@@ -181,7 +180,7 @@
   font-weight: bold;
   display: flex;
   align-items: center;
-  background: #040f16;
+  background: linear-gradient(135deg, #d3d3d3, #808080, #d3d3d3);
   color: #f5f5f5;
 }
 
