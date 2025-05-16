@@ -223,7 +223,9 @@
   height: 30px;
   width: 40px;
 }
-
+.beerBtn2{
+  display: none;
+}
 
 @media (max-width: 768px) {
   .credits {
@@ -268,14 +270,29 @@
   .img {
     height: 78.7vh; 
   }
-    .beerBtn {
-    width: 120px !important;
-    height: 25px !important;
-    font-size: 0.5rem !important;
-    font-weight: normal !important;
+  .beerBtn {
+    display: none !important;
   }
-  .beerIconImg {
-    height: 20px !important;
-    width: 40px;
+  .beerBtn2{
+    animation: headShake; 
+    animation-duration: 3s; 
+    animation-iteration-count: infinite;
+    display: inline-block !important ;
+    right: 1%;
+    position: absolute;
+    width: auto;
+    height: 35px;
+    border-radius: 5px;
+    border: none;
+    background: linear-gradient(135deg, #d3d3d3, #808080, #d3d3d3);
+  }
+  .beerIcon2{
+    height: 100%;
+    width: 100%;
+    
+  }
+  .beerIconImg2{
+    height: 100%;
+    width: 100%;
   }
 }
