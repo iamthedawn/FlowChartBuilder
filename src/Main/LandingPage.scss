@@ -219,7 +219,10 @@
 .beerBtn:active .icon {
   transform: scale(0.85);
 }
-
+.beerIconImg {
+  height: 30px;
+  width: 40px;
+}
 
 
 @media (max-width: 768px) {
@@ -264,5 +267,15 @@
   }
   .img {
     height: 78.7vh; 
+  }
+    .beerBtn {
+    width: 120px !important;
+    height: 25px !important;
+    font-size: 0.5rem !important;
+    font-weight: normal !important;
+  }
+  .beerIconImg {
+    height: 20px !important;
+    width: 40px;
   }
 }
