@@ -11,6 +11,8 @@ const MAX_ML = 300;
 const BeerGlass = ({ setBeerShow }) => {
   const [beerAmount, setBeerAmount] = useState(100);
   const [qrShow, setQrShow] = useState(false);
+  const [qrLoader, setQrLoader] = useState(true);
+
   const priceRef = useRef(50);
   const containerRef = useRef(null);
 
@@ -26,6 +28,10 @@ const BeerGlass = ({ setBeerShow }) => {
   };
 
   useEffect(() => {
+    const timeOut = setTimeout(() => {
+      setQrLoader(false);
+    }, 4000);
+
     const handleClickOutside = (event) => {
       if (
         containerRef.current &&
@@ -36,7 +42,10 @@ const BeerGlass = ({ setBeerShow }) => {
     };
 
     document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
+    return () => (
+      document.removeEventListener("mousedown", handleClickOutside),
+      clearTimeout(timeOut)
+    );
   }, []);
 
   const fillPercentage = (beerAmount / MAX_ML) * 35;
@@ -56,21 +65,42 @@ const BeerGlass = ({ setBeerShow }) => {
             alignItems: "center",
           }}
         >
-          <img
-            src={
-              priceRef.current == 100
-                ? Hundred
-                : priceRef.current == 150
-                ? OneFifty
-                : Fifty
-            }
-          />
+          {qrLoader ? (
+            <div className="loader">
+              <p>Generating QR</p>
+              <div class="spinner2 center">
+                <div class="spinner2-blade"></div>
+                <div class="spinner2-blade"></div>
+                <div class="spinner2-blade"></div>
+                <div class="spinner2-blade"></div>
+                <div class="spinner2-blade"></div>
+                <div class="spinner2-blade"></div>
+                <div class="spinner2-blade"></div>
+                <div class="spinner2-blade"></div>
+                <div class="spinner2-blade"></div>
+                <div class="spinner2-blade"></div>
+                <div class="spinner2-blade"></div>
+                <div class="spinner2-blade"></div>
+              </div>
+            </div>
+          ) : (
+            <img
+              src={
+                priceRef.current == 100
+                  ? Hundred
+                  : priceRef.current == 150
+                  ? OneFifty
+                  : Fifty
+              }
+            />
+          )}
         </div>
       </div>
     </div>
   ) : (
     <div className="mainContainer">
       <div className="container2" ref={containerRef}>
+        <div className="mobileHeader">Liked It?<br/> Buy me a Beer</div>
         <div className="glassContainer">
           <div className="glass">
             <div
