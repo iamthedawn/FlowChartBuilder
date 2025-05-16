@@ -189,7 +189,7 @@
   box-shadow: 0 0 20px 0px #2e2e2e3a;
 }
 
-.beerBtn .icon {
+.beerBtn .beerIcon {
   position: absolute;
   height: 40px;
   width: 70px;
@@ -203,7 +203,7 @@
   transform: translateX(55px);
 }
 
-.beerBtn:hover .icon {
+.beerBtn:hover .beerIcon {
   width: 175px;
 }
 
