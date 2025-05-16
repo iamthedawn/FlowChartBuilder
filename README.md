@@ -47,6 +47,7 @@ npm run build
 - Vite
 - NeuMorphism, Universe.io for animated loaders and  Buttons
 - Animate.css for animations
+- ShapeDivider for landing page section division
 
  ## ❤️ Made with love by Nishant Mourya
 
