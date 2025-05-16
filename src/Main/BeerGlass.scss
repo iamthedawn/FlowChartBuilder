@@ -1,0 +1,131 @@
+.mainContainer {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.539);
+  z-index: 999;
+}
+.container2 {
+  border-radius: 16px;
+  height: 20rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 25rem !important;
+  border: 2px solid black;
+  background-color: white;
+  box-shadow: 20px 20px 60px #0000009f, -20px -20px 60px #0000009f;
+}
+.glassContainer {
+  position: relative;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: url(../assets/images/table.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 120%;
+  border-radius: 12px 12px  0 0;
+}
+.glass {
+  width: 15rem;
+  height: 12rem;
+  margin-left: 2%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.beerGlassImg {
+  height: 100%;
+  width: 50%;
+  position: absolute;
+  top: 20%;
+  z-index: 2;
+  margin-left: 5%;
+}
+.FoamImg{
+  position: absolute;
+  height: 70%;  
+  top: 37%;
+  width: 50%;
+  margin-left: 5%;
+}
+.beer-fill {
+  position: absolute;
+  bottom: 0;
+  width: 28%;
+  z-index: 1;
+  background: linear-gradient(to top, #f9c74f, #f9844a);
+  transition: height 0.3s ease-in-out;
+  border-top: 2px solid #e59819;
+}
+.beerText {
+  box-shadow: black 0px 0px 10px;
+  font-size: 0.9rem;
+  height: 35%;
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin:1% auto;
+  border-radius: 0 0 16px 16px;
+}
+.slider {
+  z-index: 3;
+}
+.invoiceHeader{
+    margin-top: 2%;
+    border-bottom:1px solid black;
+}
+
+.payBtn {
+  margin-top: 2%;
+  position: relative;
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1em 2.5em;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 6em;
+  transition: all 0.2s;
+  border: none;
+  font-family: inherit;
+  font-weight: 500;
+  color: white;
+  background-color: black;
+}
+
+.payBtn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.payBtn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.payBtn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+}
+
+.payBtn::after {
+  background-color: #fff;
+}
+
+.payBtn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
