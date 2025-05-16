@@ -45,6 +45,8 @@ npm run build
 - Styled Components
 - dom-to-image
 - Vite
+- NeuMorphism, Universe.io for animated loaders and  Buttons
+- Animate.css for animations
 
  ## ❤️ Made with love by Nishant Mourya
 
