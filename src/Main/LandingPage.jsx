@@ -10,7 +10,7 @@ import beerIcon from "../assets/images/beerIcon.svg"
 
 const LandingPage = () => {
   const navigate = useNavigate();
-  const [beerShow, setBeerShow] = useState(true);
+  const [beerShow, setBeerShow] = useState(false);
   return (
     <div className="container">
       <div className="bgImg">
