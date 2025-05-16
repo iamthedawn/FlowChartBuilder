@@ -34,6 +34,8 @@ const BeerGlass = ({ setBeerShow }) => {
         !containerRef.current.contains(event.target)
       ) {
         setBeerShow(false);
+        setQrShow(false);
+        setQrLoader(true);
       }
     };
 
