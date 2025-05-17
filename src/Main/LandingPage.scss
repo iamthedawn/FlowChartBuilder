@@ -110,7 +110,6 @@
   font-weight: 600;
 }
 .btn {
-  cursor:pointer;
   width: 11rem;
   height: 3.25vw;
   position: absolute;
@@ -170,6 +169,7 @@
 }
 
 .beerBtn {
+  cursor:pointer !important;
   right:1%;
   position: absolute;
   width: 180px;
