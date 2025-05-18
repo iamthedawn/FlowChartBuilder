@@ -125,6 +125,7 @@ const BeerGlass = ({ setBeerShow }) => {
               onChange={handleChange}
               step="100"
               list="stoppers"
+              style={{cursor:"pointer"}}
             />
             <datalist id="stoppers">
               <option value="100" />
