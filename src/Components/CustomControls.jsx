@@ -142,7 +142,7 @@ const CustomControls = ({
         >
           <textarea
             id="importTextArea"
-            placeholder="Paste exported JSON here"
+            placeholder="Paste exported text here"
             style={{ width: "100%", height: "100px" }}
                 onKeyDown={(e) => {
       if (e.key === "Enter" && !e.shiftKey) {
@@ -230,7 +230,7 @@ const CustomControls = ({
           onMouseLeave={() => setExportBox((prev) => !prev)}
         >
           <button className="optionBtn2" onClick={exportNodesAndEdgesAsTxt}>
-            Export as Json Txt
+            Export as Txt
           </button>
           <button className="optionBtn2" onClick={handleDomToImageScreenshot}>
             Export as Image
