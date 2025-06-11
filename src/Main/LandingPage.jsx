@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./LandingPage.scss";
 import AutoFixHighIcon from "@mui/icons-material/AutoFixHigh";
 import DynamicFeedIcon from "@mui/icons-material/DynamicFeed";
@@ -6,7 +6,7 @@ import IosShareIcon from "@mui/icons-material/IosShare";
 import TouchAppIcon from "@mui/icons-material/TouchApp";
 import { useNavigate } from "react-router-dom";
 import BeerGlass from "./BeerGlass";
-import beerIcon from "../assets/images/beerIcon.svg"
+import beerIcon from "../assets/images/beerIcon.svg";
 
 const LandingPage = () => {
   const navigate = useNavigate();

@@ -6,7 +6,7 @@ import SaveIcon from "@mui/icons-material/Save";
 import SaveAltIcon from "@mui/icons-material/SaveAlt";
 import { Panel, useReactFlow } from "@xyflow/react";
 import { useState } from "react";
-import "../Main/Flow.scss";
+import "../main/Flow.scss";
 import { Tooltip } from "@mui/material";
 
 const CustomControls = ({

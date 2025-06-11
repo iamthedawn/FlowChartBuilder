@@ -1,10 +1,10 @@
-import React, { useEffect, useRef, useState } from "react";
-import "./BeerGlass.scss";
+import { useEffect, useRef, useState } from "react";
 import Beer from "../assets/images/beer.svg";
 import Foam from "../assets/images/foam.png";
 import Fifty from "../assets/images/50rs.png";
 import Hundred from "../assets/images/100rs.png";
 import OneFifty from "../assets/images/150rs.png";
+import "./BeerGlass.scss";
 
 const MAX_ML = 300;
 
@@ -40,7 +40,7 @@ const BeerGlass = ({ setBeerShow }) => {
     };
 
     document.addEventListener("mousedown", handleClickOutside);
-   return () => document.removeEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
   useEffect(() => {
@@ -102,7 +102,10 @@ const BeerGlass = ({ setBeerShow }) => {
   ) : (
     <div className="mainContainer">
       <div className="container2" ref={containerRef}>
-        <div className="mobileHeader">Liked It?<br/> Buy me a Beer</div>
+        <div className="mobileHeader">
+          Liked It?
+          <br /> Buy me a Beer
+        </div>
         <div className="glassContainer">
           <div className="glass">
             <div
@@ -125,7 +128,7 @@ const BeerGlass = ({ setBeerShow }) => {
               onChange={handleChange}
               step="100"
               list="stoppers"
-              style={{cursor:"pointer"}}
+              style={{ cursor: "pointer" }}
             />
             <datalist id="stoppers">
               <option value="100" />
@@ -138,11 +141,13 @@ const BeerGlass = ({ setBeerShow }) => {
             Quantity {beerAmount}ml : Price ₹{priceRef.current}
           </div>
 
-          <button onClick={() => {
-  setQrLoader(true);
-  setQrShow(true);
-
-}} class="payBtn">
+          <button
+            onClick={() => {
+              setQrLoader(true);
+              setQrShow(true);
+            }}
+            class="payBtn"
+          >
             Pay
           </button>
         </div>

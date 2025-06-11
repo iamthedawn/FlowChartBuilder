@@ -6,7 +6,7 @@ import {
 } from "@xyflow/react";
 import CloseIcon from '@mui/icons-material/Close';
 import { useState } from "react";
-import "../Main/Flow.scss";
+import "../main/Flow.scss";
 
 const CommonEdge = ({ id, sourceX, sourceY, targetX, targetY }) => {
   const { setEdges } = useReactFlow();
