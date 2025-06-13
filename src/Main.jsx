@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
-import Flow from "./main/Flow";
-import LandingPage from "./main/LandingPage";
+import LandingPage from "./Main/LandingPage";
+
+
 
 const Main = () => {
   const [height, setHeight] = useState(window.innerHeight);
@@ -14,7 +15,7 @@ const Main = () => {
   return (
     <div style={{ height: height, width: "100vw" }}>
       <Routes>
-        <Route exact path="/" element={<LandingPage />} />
+        <Route exact path="/" element={<LandingPage/>} />
         <Route path="/flow" element={<Flow />} />
       </Routes>
     </div>
