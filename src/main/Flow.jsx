@@ -8,13 +8,13 @@ import {
   Background,
 } from "@xyflow/react";
 import "@xyflow/react/dist/style.css";
-import { initialEdges, initialNodes } from "../utils/Config";
 import { addNode, handleDeleteNode } from "../utils/helper";
 import CustomControls from "../components/CustomControls";
 import CommonNode from "../components/CommonNode";
 import CommonEdge from "../components/CommonEdge";
 import domtoimage from "dom-to-image";
 import "./Flow.scss";
+import { initialNodes, initialEdges } from "../utils/config";
 
 const Flow = () => {
   const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
