@@ -1,0 +1,298 @@
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.bgImg {
+  top: 0;
+  position: absolute;
+  width: 100%;
+  height: 79vh;
+  overflow: hidden;
+}
+.img {
+  width: 100%;
+  height: 78.5vh; /* fix: vh not h */
+  background-image: url("../assets/images/bgImg2.png");
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+
+.custom-shape-divider-bottom-1747234414 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg); /* flip if you want wave at top */
+  z-index: 1;
+}
+
+.custom-shape-divider-bottom-1747234414 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 20vh;
+}
+
+.custom-shape-divider-bottom-1747234414 .shape-fill {
+  fill: #ffffff;
+}
+
+.text {
+  color: white;
+  position: absolute;
+  font-size: 3.5vw;
+  top: 30%;
+  left: 5%;
+  // border: 2px solid white;
+  height: 15vw;
+}
+.text2 {
+  color: white;
+  // position: absolute;
+  font-size: 1.5vw;
+}
+.features {
+  background: #ffffff;
+  width: 100%;
+  height: 20vh;
+  // border: 2px solid red;
+  bottom: 0;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.featuresList {
+  color: #777777;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border: none !important;
+}
+.featuresHeader {
+  color: #777777;
+  padding-top: 1vw;
+  font-size: 2.5vw;
+  font-weight: 600;
+  text-align: center;
+  margin: 0%;
+}
+.featuresHeader::after {
+  border-bottom: 2px solid #6372ff !important;
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.iconContainer {
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+  background: linear-gradient(135deg, #d3d3d3, #808080, #d3d3d3);
+  width: max-content;
+  padding: 5%;
+  border-radius: 50%;
+}
+.icon {
+  color: white;
+  font-size: 3.5vw !important;
+}
+.feature > h2 {
+  font-size: 1.5vw;
+  font-weight: 600;
+}
+.btn {
+  width: 11rem;
+  height: 3.25vw;
+  position: absolute;
+  bottom: 0%;
+  color: #ffffff !important;
+  font-size: 0.938rem;
+  cursor: pointer;
+  font-weight: 700;
+  transition: all 0.2s;
+  padding: 10px 20px;
+  border-radius: 100px;
+  // background: linear-gradient(135deg, #d3d3d3, #808080, #d3d3d3);
+  background: linear-gradient(
+    135deg,
+    #4d4d4d,
+    #1a1a1a,
+    #4d4d4d
+  ); // Dark grey gradient
+
+  // background: #cfef00;
+  border: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 200;
+}
+
+.btn:hover {
+  background: linear-gradient(135deg, #d3d3d3, #808080, #d3d3d3);
+  // background: #c4e201;
+  // background: linear-gradient(
+  //   135deg,
+  //   #4d4d4d,
+  //   #1a1a1a,
+  //   #4d4d4d
+  // ); // Dark grey gradient
+}
+
+.btn > svg {
+  width: 2.125vw;
+  margin-left: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.btn:hover svg {
+  transform: translateX(5px);
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+.credits {
+  width: 140px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.beerBtn {
+  cursor:pointer !important;
+  right:1%;
+  position: absolute;
+  width: 180px;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  transition: all 0.5s ease-in-out;
+  font-size: 0.8rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, #d3d3d3, #808080, #d3d3d3);
+  color: #f5f5f5;
+}
+
+.beerBtn:hover {
+  box-shadow: 0 0 20px 0px #2e2e2e3a;
+}
+
+.beerBtn .beerIcon {
+  position: absolute;
+  height: 40px;
+  width: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s;
+}
+
+.beerBtn .beerTxt {
+  transform: translateX(55px);
+}
+
+.beerBtn:hover .beerIcon {
+  width: 175px;
+}
+
+.beerBtn:hover .beerTxt {
+  transition: all 0.5s;
+  opacity: 0;
+}
+
+.beerBtn:focus {
+  outline: none;
+}
+
+.beerBtn:active .icon {
+  transform: scale(0.85);
+}
+.beerIconImg {
+  height: 30px;
+  width: 40px;
+}
+.beerBtn2{
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .credits {
+    width: 100%;
+    text-align: center;
+  }
+  .text {
+    font-size: 2rem;
+    top: 20%;
+    left: 5%;
+    height: 120px;
+    // border: 2px solid white;
+  }
+  .text2 {
+    font-size: 0.85rem;
+  }
+  .btn {
+    width: 30vw;
+    height: 4vw;
+    bottom: 0%;
+    font-size: 2.5vw;
+  }
+  .featuresHeader {
+    font-size: 4vw;
+  }
+
+  .icon {
+    color: white;
+    font-size: 2rem !important;
+  }
+  .iconContainer {
+    width: max-content;
+    padding: 12%;
+  }
+  .feature > h2 {
+    font-size: 0.5rem;
+    font-weight: 600;
+  }
+  .bgImg {
+    height: 72vh;
+  }
+  .img {
+    height: 78.7vh; 
+  }
+  .beerBtn {
+    display: none !important;
+  }
+  .beerBtn2{
+    animation: headShake; 
+    animation-duration: 3s; 
+    animation-iteration-count: infinite;
+    display: inline-block !important ;
+    right: 1%;
+    position: absolute;
+    width: auto;
+    height: 35px;
+    border-radius: 5px;
+    border: none;
+    background: linear-gradient(135deg, #d3d3d3, #808080, #d3d3d3);
+  }
+  .beerIcon2{
+    height: 100%;
+    width: 100%;
+    
+  }
+  .beerIconImg2{
+    height: 100%;
+    width: 100%;
+  }
+}
