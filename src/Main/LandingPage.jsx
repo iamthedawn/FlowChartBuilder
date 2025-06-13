@@ -14,19 +14,19 @@ const LandingPage = () => {
   return (
     <div className="container">
       <div className="bgImg">
-        <button class="beerBtn" onClick={() => setBeerShow(true)}>
-          <span class="beerIcon">
+        <button className="beerBtn" onClick={() => setBeerShow(true)}>
+          <span className="beerIcon">
             <img src={beerIcon} className="beerIconImg" />
           </span>
-          <span class="beerTxt">
+          <span className="beerTxt">
             Liked it?
             <br />
             Buy Me A Beer
           </span>
         </button>
 
-        <button class="beerBtn2" onClick={() => setBeerShow(true)}>
-          <span class="beerIcon2 ">
+        <button className="beerBtn2" onClick={() => setBeerShow(true)}>
+          <span className="beerIcon2 ">
             <img src={beerIcon} className="beerIconImg2" />
           </span>
         </button>

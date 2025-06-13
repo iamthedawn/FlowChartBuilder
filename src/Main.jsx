@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
-import LandingPage from "./main/LandingPage";
 import Flow from "./main/Flow";
+import LandingPage from "./main/LandingPage";
 
 const Main = () => {
   const [height, setHeight] = useState(window.innerHeight);
