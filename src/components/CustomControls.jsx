@@ -144,29 +144,31 @@ const CustomControls = ({
             id="importTextArea"
             placeholder="Paste exported text here"
             style={{ width: "100%", height: "100px" }}
-                onKeyDown={(e) => {
-      if (e.key === "Enter" && !e.shiftKey) {
-        e.preventDefault(); // prevent newline
-        const input = e.target.value.trim();
-        try {
-          const nodesMatch = input.match(/nodes:\s*(\[[\s\S]*?\])/);
-          const edgesMatch = input.match(/edges:\s*(\[[\s\S]*?\])/);
-          if (nodesMatch && edgesMatch) {
-            const nodes = JSON.parse(nodesMatch[1]);
-            const edges = JSON.parse(edgesMatch[1]);
-            setNodes(nodes);
-            setEdges(edges);
-            alert("Nodes and edges have been successfully imported!");
-          } else {
-            alert(
-              "Invalid format. Please ensure the text contains 'nodes: [...]' and 'edges: [...]'."
-            );
-          }
-        } catch (error) {
-          alert("Error parsing nodes or edges. Please check your input.");
-        }
-      }
-    }}
+            onKeyDown={(e) => {
+              if (e.key === "Enter" && !e.shiftKey) {
+                e.preventDefault(); // prevent newline
+                const input = e.target.value.trim();
+                try {
+                  const nodesMatch = input.match(/nodes:\s*(\[[\s\S]*?\])/);
+                  const edgesMatch = input.match(/edges:\s*(\[[\s\S]*?\])/);
+                  if (nodesMatch && edgesMatch) {
+                    const nodes = JSON.parse(nodesMatch[1]);
+                    const edges = JSON.parse(edgesMatch[1]);
+                    setNodes(nodes);
+                    setEdges(edges);
+                    alert("Nodes and edges have been successfully imported!");
+                  } else {
+                    alert(
+                      "Invalid format. Please ensure the text contains 'nodes: [...]' and 'edges: [...]'."
+                    );
+                  }
+                } catch (error) {
+                  alert(
+                    "Error parsing nodes or edges. Please check your input."
+                  );
+                }
+              }
+            }}
           />
           <button
             className="optionBtn2"
@@ -178,7 +180,6 @@ const CustomControls = ({
                 // Extract nodes and edges using regex
                 const nodesMatch = input.match(/nodes:\s*(\[[\s\S]*?\])/); // Match the nodes array
                 const edgesMatch = input.match(/edges:\s*(\[[\s\S]*?\])/); // Match the edges array
-                console.log("my_hii nodesMatch",nodesMatch)
                 if (nodesMatch && edgesMatch) {
                   const nodes = JSON.parse(nodesMatch[1]); // Parse the nodes array
                   const edges = JSON.parse(edgesMatch[1]); // Parse the edges array
@@ -232,7 +233,10 @@ const CustomControls = ({
           <button className="optionBtn2" onClick={exportNodesAndEdgesAsTxt}>
             Export as Txt
           </button>
-          <button className="optionBtn2" onClick={handleDomToImageScreenshot}>
+          <button
+            className="optionBtn2"
+            onClick={() => handleDomToImageScreenshot(setExportBox)}
+          >
             Export as Image
           </button>
         </div>

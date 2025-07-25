@@ -27,7 +27,8 @@ const Flow = () => {
   });
   const [showLoader, setShowLoader] = useState(true);
 
-  const handleDomToImageScreenshot = () => {
+  const handleDomToImageScreenshot = (setExportBox) => {
+    setExportBox(false);
     domtoimage
       .toPng(document.body)
       .then((dataUrl) => {
